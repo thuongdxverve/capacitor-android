@@ -1,0 +1,87 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.getcapacitor.android" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="33" />
+7-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml
+8
+9    <uses-feature
+9-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:4:5-5:36
+10        android:name="android.hardware.camera"
+10-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:4:19-57
+11        android:required="false" />
+11-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:5:9-33
+12
+13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+13-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:27:5-80
+13-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:27:22-78
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:28:5-67
+14-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:28:22-65
+15
+16    <application>
+16-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:7:5-25:19
+17        <service
+17-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:8:9-117
+18            android:name="com.getcapacitor.plugin.background.BackgroundTaskService"
+18-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:8:18-89
+19            android:exported="false" />
+19-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:8:90-114
+20
+21        <receiver android:name="com.getcapacitor.plugin.notification.TimedNotificationPublisher" />
+21-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:9:9-100
+21-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:9:19-97
+22        <receiver android:name="com.getcapacitor.plugin.notification.NotificationDismissReceiver" />
+22-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:10:9-101
+22-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:10:19-98
+23
+24        <meta-data
+24-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:11:9-96
+25            android:name="firebase_messaging_auto_init_enabled"
+25-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:11:20-71
+26            android:value="false" />
+26-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:11:72-93
+27
+28        <service
+28-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:12:9-17:19
+29            android:name="com.getcapacitor.CapacitorFirebaseMessagingService"
+29-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:12:18-83
+30            android:exported="false"
+30-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:13:13-37
+31            android:stopWithTask="false" >
+31-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:12:84-112
+32            <intent-filter>
+32-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:14:13-16:29
+33                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+33-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:15:17-78
+33-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:15:25-75
+34            </intent-filter>
+35        </service>
+36
+37        <receiver
+37-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:18:9-24:20
+38            android:name="com.getcapacitor.plugin.notification.LocalNotificationRestoreReceiver"
+38-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:18:19-103
+39            android:directBootAware="true"
+39-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:18:104-134
+40            android:exported="false" >
+40-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:18:135-159
+41            <intent-filter>
+41-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:19:13-23:29
+42                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+42-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:20:17-85
+42-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:20:25-83
+43                <action android:name="android.intent.action.BOOT_COMPLETED" />
+43-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:21:17-78
+43-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:21:25-76
+44                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+44-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:22:17-82
+44-->/Users/dxthuong/verve-workspace/thanksgift-appli/node_modules/@capacitor/android/capacitor/src/main/AndroidManifest.xml:22:25-79
+45            </intent-filter>
+46        </receiver>
+47    </application>
+48
+49</manifest>

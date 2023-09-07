@@ -38,6 +38,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import android.os.Build;
 
 /**
  * The Camera plugin makes it easy to take a photo or have the user select a photo
@@ -165,9 +166,16 @@ public class Camera extends Plugin {
   }
 
   private boolean checkPhotosPermissions(PluginCall call) {
-    if(!hasPermission(Manifest.permission.READ_EXTERNAL_STORAGE)) {
-      pluginRequestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_IMAGE_CAPTURE);
-      return false;
+    if(Build.VERSION.SDK_INT >= 33){
+        if (!hasPermission(Manifest.permission.READ_MEDIA_IMAGES) ||  !hasPermission(Manifest.permission.READ_MEDIA_VIDEO)) {
+            pluginRequestPermissions(new String[]{Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO}, REQUEST_IMAGE_CAPTURE);
+            return false;
+        }
+    }else {
+        if (!hasPermission(Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            pluginRequestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_IMAGE_CAPTURE);
+            return false;
+        }
     }
     return true;
   }
